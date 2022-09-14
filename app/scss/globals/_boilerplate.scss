@@ -1,0 +1,67 @@
+// font-family
+$family: 'Space Grotesk', sans-serif;
+
+// colors
+
+// primary colors
+$grad-start: hsl(249, 99%, 64%);
+$grad-end: hsl(278, 94%, 30%);
+$red: hsl(0, 100%, 66%);
+// Neutral
+$white: hsl(0, 0%, 100%);
+$light-grayish-violet: hsl(270, 3%, 87%);
+$dark-grayish-violet: hsl(279, 6%, 55%);
+$very-dark-violet: hsl(278, 68%, 11%);
+
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $family;
+    font-weight: 500;
+    // overflow: hidden;
+}
+
+p{
+    margin-top: 0;
+}
+
+h1,h2,h3 {
+    font-weight: 500;
+    margin-top: 0;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+}
+
+// color uses
+$error-color: $red;
+$placeholder-color: $light-grayish-violet;
+$text-color: $dark-grayish-violet;
+$btn-bg: $very-dark-violet;
+
+
+// view
+$small: '(min-width: 768px)';
+$mobile: '(max-width: 767px)';
+// $large: '(mix-width: 1350px)'; 
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }

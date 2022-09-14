@@ -1,0 +1,379 @@
+@forward 'globals';
+
+@import './globals/boilerplate';
+
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background-color: $white;
+    height: 100vh;
+
+}
+
+body::after {
+    content: "";
+    background-image: url("/app/images/bg-main-desktop.png");
+    background-size: cover;
+    width: 33.5%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    transition: width 0.35s ease-in-out, height 0.35s ease-in-out;
+}
+
+.marginbottom {
+    margin-bottom: 15px;
+}
+
+.error {
+    font-size: 12px;
+    font-weight: 500;
+    color: $error-color;
+}
+
+// end of main styles
+
+
+.maincontainer {
+    height: 100vh;
+    width: 100vw;
+
+    button {
+        background-color: $btn-bg;
+        padding: 10px 12px;
+        width: 100%;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: $white;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    .left img {
+        height: 100%;
+    }
+    
+    // left page
+    .left {
+        width: 54%;
+        .cards {
+            padding: 2rem;
+            position: absolute;
+            margin-left: 18%;
+            top: 19%;
+            .card {
+                width: 26.5rem;
+                height: 14.5rem;
+                border-radius: 10px;
+                background-size: cover;
+                color: $white;
+                position: relative;
+                padding: 32px;
+
+                &.frontcard {
+                    background-image: url("/app/images/bg-card-front.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    margin: 0 auto 32px auto;
+                    right: 90px;
+                    position: relative;
+
+                    .cardnumber {
+                        text-align: left;
+                        margin-top: 25px;
+                        font-size: 24px;
+                        letter-spacing: 4px;
+                    }
+                    .info {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 20px;
+                        letter-spacing: 1.5px;
+                        font-size: 16px;
+                        .name {
+                            text-transform: uppercase;
+                        }
+                    }
+                    .logo {
+                        position: absolute;
+                        top: 27px;
+                        left: 27px;
+                    }
+                }
+                &.frontcard div {
+                    word-spacing: 6px;
+                }
+
+                &.backcard {
+                    background-image: url("/app/images/bg-card-back.png");
+                    background-size: contain;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    margin: 0 0 0 auto;
+                    .zeros {
+                        position: absolute;
+                        right: 60px;
+                        top: 114px;
+                        color: $white;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+    
+    // right page
+
+    .right {
+        position: relative;
+        width: 46%;
+        .form {
+            position: absolute;
+            width: 400px;
+        }
+        form {
+            label {
+                font-size: 15px;
+                font-weight: 500;
+                text-transform: uppercase;
+                line-height: 40px;
+            }
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .mth-yr {
+                    label {
+                        display: block;
+                    }
+                    input {
+                        display: inline;
+                        width: 80px;
+                    }
+                }
+                .cvc-con {
+                    width: 210px;
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+            input {
+                width: 100%;
+                border: none;
+                outline: none;
+                background: none;
+                padding: 13px;
+                border-radius: 7px;
+                &::placeholder {
+                    color: $text-color;
+                    font-family: 'Space Grotesk', sans-serif;
+                    opacity: 0.6;
+                }
+                &.field {
+                    border: 1px solid $text-color;
+                }
+
+                &.btn {
+                    background-color: $btn-bg;
+                    color: $white;
+                    cursor: pointer;
+                }
+                &:hover {
+                    border: 1px solid $grad-start;
+                }
+            }
+        }
+    }
+
+    .right {
+        .final {
+            @media #{$small} {
+                width: 300px !important;
+                left: 50% !important;
+                top: 50% !important;
+            }
+            display: none;
+            width: 250px;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            .content {
+                text-align: center;
+                .check {
+                    margin-bottom: 20px;
+                }
+                h2 {
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    word-spacing: 4px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 14px;
+                    color: $text-color;
+                    margin-bottom: 20px;
+                }
+                button {
+                    background-color: $btn-bg;
+                    padding: 10px 12px;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    color: $white;
+                    border-radius: 6px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+
+    @media #{$small} {
+        display: flex;
+        justify-content: space-between;
+        
+
+        .left {
+            width: 46%;
+            height: 100% !important;
+        }
+
+        .right {
+            width: calc(100% - 400px);
+            height: 100%;
+            .form {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    // mobile view 
+
+    @media #{$mobile} {
+        .left {
+            background-image: url("/app/images/bg-main-mobile.png");
+            width: 100%;
+            height: 36vh !important;
+            background-repeat: no-repeat;
+            background-size: cover !important;
+            .cards {
+                position: absolute;
+                top: 50px;
+                left: 5%;
+                .card{
+                    width: 30rem;
+                    height: 16rem;
+                    &.frontcard {
+                        z-index: 111;
+                    }
+                    &.backcard {
+                        left: 80px;
+                        bottom: 450px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 100%;
+            .form {
+                top: 100px;
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .cards {
+        left: -25% !important;
+        height: 25rem;
+        .card {
+            width: 28rem !important;
+        }
+    }
+}
+
+@media (max-width: 395px) {
+    .backcard {
+        left: 20px !important;
+    }
+    .form {
+        width: 380px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .cards {
+        transform: scale(.7) !important;
+    }
+}
+
+@media (max-width: 1400px) {
+    .card {
+        transform: scale(.85) !important;
+    }
+    .cards {
+        margin-left: 5% !important;
+    }
+    .frontcard {
+        right: 0 !important;
+    }
+}
+
+@media (max-width: 1010px) {
+    .cards {
+        margin-left: 0 !important;
+        transform: scale(.8);
+        left: -60px;
+    }
+    .backcard {
+        margin: 0 auto !important;
+    }
+}
+
+@media (max-width: 767px) {
+    body::after {
+        background-image: none;
+    }
+}
+
+
+// footer
+
+footer {
+    @media #{mobile} {
+        padding-top: 30px;
+    }
+    font-size: 11px;
+    text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}

@@ -1,0 +1,425 @@
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+  margin-top: 0;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+  margin-top: 0;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background-color: hsl(0deg, 0%, 100%);
+  height: 100vh;
+}
+
+body::after {
+  content: "";
+  background-image: url("/app/images/bg-main-desktop.png");
+  background-size: cover;
+  width: 33.5%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  transition: width 0.35s ease-in-out, height 0.35s ease-in-out;
+}
+
+.marginbottom {
+  margin-bottom: 15px;
+}
+
+.error {
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(0deg, 100%, 66%);
+}
+
+.maincontainer {
+  height: 100vh;
+  width: 100vw;
+}
+.maincontainer button {
+  background-color: hsl(278deg, 68%, 11%);
+  padding: 10px 12px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.maincontainer .btn:hover {
+  opacity: 0.9;
+}
+.maincontainer .left img {
+  height: 100%;
+}
+.maincontainer .left {
+  width: 54%;
+}
+.maincontainer .left .cards {
+  padding: 2rem;
+  position: absolute;
+  margin-left: 18%;
+  top: 19%;
+}
+.maincontainer .left .cards .card {
+  width: 26.5rem;
+  height: 14.5rem;
+  border-radius: 10px;
+  background-size: cover;
+  color: hsl(0deg, 0%, 100%);
+  position: relative;
+  padding: 32px;
+}
+.maincontainer .left .cards .card.frontcard {
+  background-image: url("/app/images/bg-card-front.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 auto 32px auto;
+  right: 90px;
+  position: relative;
+}
+.maincontainer .left .cards .card.frontcard .cardnumber {
+  text-align: left;
+  margin-top: 25px;
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+.maincontainer .left .cards .card.frontcard .info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+}
+.maincontainer .left .cards .card.frontcard .info .name {
+  text-transform: uppercase;
+}
+.maincontainer .left .cards .card.frontcard .logo {
+  position: absolute;
+  top: 27px;
+  left: 27px;
+}
+.maincontainer .left .cards .card.frontcard div {
+  word-spacing: 6px;
+}
+.maincontainer .left .cards .card.backcard {
+  background-image: url("/app/images/bg-card-back.png");
+  background-size: contain;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0 0 0 auto;
+}
+.maincontainer .left .cards .card.backcard .zeros {
+  position: absolute;
+  right: 60px;
+  top: 114px;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 24px;
+}
+.maincontainer .right {
+  position: relative;
+  width: 46%;
+}
+.maincontainer .right .form {
+  position: absolute;
+  width: 400px;
+}
+.maincontainer .right form label {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+.maincontainer .right form .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.maincontainer .right form .flex .mth-yr label {
+  display: block;
+}
+.maincontainer .right form .flex .mth-yr input {
+  display: inline;
+  width: 80px;
+}
+.maincontainer .right form .flex .cvc-con {
+  width: 210px;
+}
+.maincontainer .right form .flex .cvc-con input {
+  width: 100%;
+}
+.maincontainer .right form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 13px;
+  border-radius: 7px;
+}
+.maincontainer .right form input::-moz-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  font-family: "Space Grotesk", sans-serif;
+  opacity: 0.6;
+}
+.maincontainer .right form input:-ms-input-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  font-family: "Space Grotesk", sans-serif;
+  opacity: 0.6;
+}
+.maincontainer .right form input::placeholder {
+  color: hsl(279deg, 6%, 55%);
+  font-family: "Space Grotesk", sans-serif;
+  opacity: 0.6;
+}
+.maincontainer .right form input.field {
+  border: 1px solid hsl(279deg, 6%, 55%);
+}
+.maincontainer .right form input.btn {
+  background-color: hsl(278deg, 68%, 11%);
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+}
+.maincontainer .right form input:hover {
+  border: 1px solid hsl(249deg, 99%, 64%);
+}
+.maincontainer .right .final {
+  display: none;
+  width: 250px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 768px) {
+  .maincontainer .right .final {
+    width: 300px !important;
+    left: 50% !important;
+    top: 50% !important;
+  }
+}
+.maincontainer .right .final .content {
+  text-align: center;
+}
+.maincontainer .right .final .content .check {
+  margin-bottom: 20px;
+}
+.maincontainer .right .final .content h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  word-spacing: 4px;
+  margin-bottom: 20px;
+}
+.maincontainer .right .final .content p {
+  font-size: 14px;
+  color: hsl(279deg, 6%, 55%);
+  margin-bottom: 20px;
+}
+.maincontainer .right .final .content button {
+  background-color: hsl(278deg, 68%, 11%);
+  padding: 10px 12px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 6px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .maincontainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .maincontainer .left {
+    width: 46%;
+    height: 100% !important;
+  }
+  .maincontainer .right {
+    width: calc(100% - 400px);
+    height: 100%;
+  }
+  .maincontainer .right .form {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 767px) {
+  .maincontainer .left {
+    background-image: url("/app/images/bg-main-mobile.png");
+    width: 100%;
+    height: 36vh !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+  }
+  .maincontainer .left .cards {
+    position: absolute;
+    top: 50px;
+    left: 5%;
+  }
+  .maincontainer .left .cards .card {
+    width: 30rem;
+    height: 16rem;
+  }
+  .maincontainer .left .cards .card.frontcard {
+    z-index: 111;
+  }
+  .maincontainer .left .cards .card.backcard {
+    left: 80px;
+    bottom: 450px;
+  }
+  .maincontainer .right {
+    width: 100%;
+  }
+  .maincontainer .right .form {
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    left: -25% !important;
+    height: 25rem;
+  }
+  .cards .card {
+    width: 28rem !important;
+  }
+}
+@media (max-width: 395px) {
+  .backcard {
+    left: 20px !important;
+  }
+  .form {
+    width: 380px !important;
+  }
+}
+@media (max-width: 375px) {
+  .cards {
+    transform: scale(0.7) !important;
+  }
+}
+@media (max-width: 1400px) {
+  .card {
+    transform: scale(0.85) !important;
+  }
+  .cards {
+    margin-left: 5% !important;
+  }
+  .frontcard {
+    right: 0 !important;
+  }
+}
+@media (max-width: 1010px) {
+  .cards {
+    margin-left: 0 !important;
+    transform: scale(0.8);
+    left: -60px;
+  }
+  .backcard {
+    margin: 0 auto !important;
+  }
+}
+@media (max-width: 767px) {
+  body::after {
+    background-image: none;
+  }
+}
+footer {
+  font-size: 11px;
+  text-align: center;
+}
+@media mobile {
+  footer {
+    padding-top: 30px;
+  }
+}
+footer a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
