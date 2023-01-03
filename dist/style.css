@@ -164,7 +164,7 @@ body::after {
   right: 90px;
   position: relative;
 }
-.maincontainer .left .cards .card.frontcard .cardnumber {
+.maincontainer .left .cards .card.frontcard .card-num {
   text-align: left;
   margin-top: 25px;
   font-size: 24px;
@@ -267,6 +267,14 @@ body::after {
 }
 .maincontainer .right form input:hover {
   border: 1px solid hsl(249deg, 99%, 64%);
+}
+.maincontainer .right form .btn:active {
+  transform: scale(0.98);
+}
+.maincontainer .right form .form-input-error__message {
+  color: rgb(245, 10, 0);
+  font-size: 0.875rem;
+  margin-top: 0.35rem;
 }
 .maincontainer .right .final {
   display: none;

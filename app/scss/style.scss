@@ -97,7 +97,7 @@ body::after {
                     right: 90px;
                     position: relative;
 
-                    .cardnumber {
+                    .card-num {
                         text-align: left;
                         margin-top: 25px;
                         font-size: 24px;
@@ -201,6 +201,15 @@ body::after {
                 &:hover {
                     border: 1px solid $grad-start;
                 }
+            }
+            .btn:active{
+                transform: scale(0.98);
+            }
+            
+            .form-input-error__message{
+                color: rgb(245, 10, 0);
+                font-size: 0.875rem;
+                margin-top: 0.35rem;
             }
         }
     }
