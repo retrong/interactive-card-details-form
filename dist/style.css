@@ -107,9 +107,18 @@ body::after {
 }
 
 .error {
-  font-size: 12px;
-  font-weight: 500;
+  border: 2px solid hsl(0deg, 100%, 66%);
+}
+
+.error_message {
+  gap: 0;
+}
+
+.error_message::after {
+  content: "can't be blank";
   color: hsl(0deg, 100%, 66%);
+  font-size: 16px;
+  margin-top: 0.2rem;
 }
 
 .maincontainer {
@@ -228,9 +237,6 @@ body::after {
   display: inline;
   width: 80px;
 }
-.maincontainer .right form .flex .cvc-con {
-  width: 210px;
-}
 .maincontainer .right form .flex .cvc-con input {
   width: 100%;
 }
@@ -277,16 +283,14 @@ body::after {
   margin-top: 0.35rem;
 }
 .maincontainer .right .final {
-  display: none;
-  width: 250px;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .maincontainer .right .final {
-    width: 300px !important;
     left: 50% !important;
     top: 50% !important;
   }
@@ -317,6 +321,9 @@ body::after {
   color: hsl(0deg, 0%, 100%);
   border-radius: 6px;
   cursor: pointer;
+}
+.maincontainer .right .hidden {
+  display: none;
 }
 @media (min-width: 768px) {
   .maincontainer {
@@ -379,6 +386,9 @@ body::after {
   .cards .card {
     width: 28rem !important;
   }
+  .cvc-con {
+    width: auto;
+  }
 }
 @media (max-width: 395px) {
   .backcard {
@@ -417,6 +427,10 @@ body::after {
 @media (max-width: 767px) {
   body::after {
     background-image: none;
+  }
+  .final {
+    min-height: 0 !important;
+    margin-top: 8rem;
   }
 }
 footer {

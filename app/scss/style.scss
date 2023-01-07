@@ -35,9 +35,18 @@ body::after {
 }
 
 .error {
-    font-size: 12px;
-    font-weight: 500;
+    border: 2px solid  $error-color;
+}
+
+.error_message{
+    gap: 0;
+}
+
+.error_message::after{
+    content: "can't be blank";
     color: $error-color;
+    font-size: 16px;
+    margin-top: .2rem;
 }
 
 // end of main styles
@@ -171,7 +180,6 @@ body::after {
                     }
                 }
                 .cvc-con {
-                    width: 210px;
                     input {
                         width: 100%;
                     }
@@ -217,16 +225,14 @@ body::after {
     .right {
         .final {
             @media #{$small} {
-                width: 300px !important;
                 left: 50% !important;
                 top: 50% !important;
             }
-            display: none;
-            width: 250px;
-            position: absolute;
-            top: 100px;
-            left: 50%;
-            transform: translateX(-50%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             .content {
                 text-align: center;
                 .check {
@@ -254,6 +260,9 @@ body::after {
                     cursor: pointer;
                 }
             }
+        }
+        .hidden{
+            display: none;
         }
     }
 
@@ -327,6 +336,9 @@ body::after {
             width: 28rem !important;
         }
     }
+    .cvc-con{
+        width: auto;
+    }
 }
 
 @media (max-width: 395px) {
@@ -370,6 +382,10 @@ body::after {
 @media (max-width: 767px) {
     body::after {
         background-image: none;
+    }
+    .final{
+        min-height: 0 !important;
+        margin-top: 8rem;
     }
 }
 
